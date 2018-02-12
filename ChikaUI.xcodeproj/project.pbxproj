@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48C224C0202AC72100EB2D0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C224BF202AC72100EB2D0E /* AppDelegate.swift */; };
+		48C224C2202AC72100EB2D0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C224C1202AC72100EB2D0E /* ViewController.swift */; };
+		48C224C5202AC72100EB2D0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C224C3202AC72100EB2D0E /* Main.storyboard */; };
+		48C224C7202AC72100EB2D0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C224C6202AC72100EB2D0E /* Assets.xcassets */; };
+		48C224CA202AC72100EB2D0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C224C8202AC72100EB2D0E /* LaunchScreen.storyboard */; };
+		48C224D5202AC72100EB2D0E /* ChikaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C224D4202AC72100EB2D0E /* ChikaUITests.swift */; };
+		48C99CF7202DE51D002C46B6 /* TypingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C99CF6202DE51D002C46B6 /* TypingView.swift */; };
+		4AEDF1F967FFE9111DA5A506 /* Pods_ChikaUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412DC7AF4C3F3E64F7506C31 /* Pods_ChikaUI.framework */; };
+		5F023F9515D913895563273C /* Pods_ChikaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EC85C43953D672B4EECF4C /* Pods_ChikaUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48C224D1202AC72100EB2D0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48C224B4202AC72100EB2D0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48C224BB202AC72100EB2D0E;
+			remoteInfo = ChikaUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		12E2CD0824CF8D4890AC61E9 /* Pods-ChikaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaUITests/Pods-ChikaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		16EC85C43953D672B4EECF4C /* Pods_ChikaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChikaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		412DC7AF4C3F3E64F7506C31 /* Pods_ChikaUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChikaUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C224BC202AC72100EB2D0E /* ChikaUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChikaUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C224BF202AC72100EB2D0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		48C224C1202AC72100EB2D0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48C224C4202AC72100EB2D0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48C224C6202AC72100EB2D0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48C224C9202AC72100EB2D0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48C224CB202AC72100EB2D0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48C224D0202AC72100EB2D0E /* ChikaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChikaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C224D4202AC72100EB2D0E /* ChikaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChikaUITests.swift; sourceTree = "<group>"; };
+		48C224D6202AC72100EB2D0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48C99CF6202DE51D002C46B6 /* TypingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingView.swift; sourceTree = "<group>"; };
+		A2EBC3E0F3B183CC93B526F7 /* Pods-ChikaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaUITests/Pods-ChikaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B3A0EE9248E07732772C71F6 /* Pods-ChikaUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaUI/Pods-ChikaUI.release.xcconfig"; sourceTree = "<group>"; };
+		C1FFA6B6940ACFFC8E2538CA /* Pods-ChikaUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaUI/Pods-ChikaUI.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48C224B9202AC72100EB2D0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AEDF1F967FFE9111DA5A506 /* Pods_ChikaUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C224CD202AC72100EB2D0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F023F9515D913895563273C /* Pods_ChikaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		359FE78912CD695B6E47C3C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1FFA6B6940ACFFC8E2538CA /* Pods-ChikaUI.debug.xcconfig */,
+				B3A0EE9248E07732772C71F6 /* Pods-ChikaUI.release.xcconfig */,
+				12E2CD0824CF8D4890AC61E9 /* Pods-ChikaUITests.debug.xcconfig */,
+				A2EBC3E0F3B183CC93B526F7 /* Pods-ChikaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		48C224B3202AC72100EB2D0E = {
+			isa = PBXGroup;
+			children = (
+				48C224BE202AC72100EB2D0E /* ChikaUI */,
+				48C224D3202AC72100EB2D0E /* ChikaUITests */,
+				48C224BD202AC72100EB2D0E /* Products */,
+				359FE78912CD695B6E47C3C9 /* Pods */,
+				C10BF94AF5FCAC411A485243 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		48C224BD202AC72100EB2D0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48C224BC202AC72100EB2D0E /* ChikaUI.app */,
+				48C224D0202AC72100EB2D0E /* ChikaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48C224BE202AC72100EB2D0E /* ChikaUI */ = {
+			isa = PBXGroup;
+			children = (
+				48C224CB202AC72100EB2D0E /* Info.plist */,
+				48C224BF202AC72100EB2D0E /* AppDelegate.swift */,
+				48C224C1202AC72100EB2D0E /* ViewController.swift */,
+				48C224C6202AC72100EB2D0E /* Assets.xcassets */,
+				48C224C8202AC72100EB2D0E /* LaunchScreen.storyboard */,
+				48C224C3202AC72100EB2D0E /* Main.storyboard */,
+				48C224DF202AC72A00EB2D0E /* Source */,
+			);
+			path = ChikaUI;
+			sourceTree = "<group>";
+		};
+		48C224D3202AC72100EB2D0E /* ChikaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				48C224D4202AC72100EB2D0E /* ChikaUITests.swift */,
+				48C224D6202AC72100EB2D0E /* Info.plist */,
+			);
+			path = ChikaUITests;
+			sourceTree = "<group>";
+		};
+		48C224DF202AC72A00EB2D0E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				48C99CF6202DE51D002C46B6 /* TypingView.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C10BF94AF5FCAC411A485243 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				412DC7AF4C3F3E64F7506C31 /* Pods_ChikaUI.framework */,
+				16EC85C43953D672B4EECF4C /* Pods_ChikaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48C224BB202AC72100EB2D0E /* ChikaUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C224D9202AC72100EB2D0E /* Build configuration list for PBXNativeTarget "ChikaUI" */;
+			buildPhases = (
+				D655309738969270227ACDC3 /* [CP] Check Pods Manifest.lock */,
+				48C224B8202AC72100EB2D0E /* Sources */,
+				48C224B9202AC72100EB2D0E /* Frameworks */,
+				48C224BA202AC72100EB2D0E /* Resources */,
+				867DB9B88AC1F78F280BD6B8 /* [CP] Embed Pods Frameworks */,
+				CFDA85EF2983DE378749B4D7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChikaUI;
+			productName = ChikaUI;
+			productReference = 48C224BC202AC72100EB2D0E /* ChikaUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		48C224CF202AC72100EB2D0E /* ChikaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C224DC202AC72100EB2D0E /* Build configuration list for PBXNativeTarget "ChikaUITests" */;
+			buildPhases = (
+				B0B16A0E1C51951142A2643A /* [CP] Check Pods Manifest.lock */,
+				48C224CC202AC72100EB2D0E /* Sources */,
+				48C224CD202AC72100EB2D0E /* Frameworks */,
+				48C224CE202AC72100EB2D0E /* Resources */,
+				CD3A89A83767B7E9A2252FB0 /* [CP] Embed Pods Frameworks */,
+				82F6B6129C91070D9768AB8B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48C224D2202AC72100EB2D0E /* PBXTargetDependency */,
+			);
+			name = ChikaUITests;
+			productName = ChikaUITests;
+			productReference = 48C224D0202AC72100EB2D0E /* ChikaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48C224B4202AC72100EB2D0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Nir;
+				TargetAttributes = {
+					48C224BB202AC72100EB2D0E = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					48C224CF202AC72100EB2D0E = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 48C224BB202AC72100EB2D0E;
+					};
+				};
+			};
+			buildConfigurationList = 48C224B7202AC72100EB2D0E /* Build configuration list for PBXProject "ChikaUI" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48C224B3202AC72100EB2D0E;
+			productRefGroup = 48C224BD202AC72100EB2D0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48C224BB202AC72100EB2D0E /* ChikaUI */,
+				48C224CF202AC72100EB2D0E /* ChikaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48C224BA202AC72100EB2D0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C224CA202AC72100EB2D0E /* LaunchScreen.storyboard in Resources */,
+				48C224C7202AC72100EB2D0E /* Assets.xcassets in Resources */,
+				48C224C5202AC72100EB2D0E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C224CE202AC72100EB2D0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		82F6B6129C91070D9768AB8B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChikaUITests/Pods-ChikaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		867DB9B88AC1F78F280BD6B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChikaUI/Pods-ChikaUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0B16A0E1C51951142A2643A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChikaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD3A89A83767B7E9A2252FB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChikaUITests/Pods-ChikaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFDA85EF2983DE378749B4D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChikaUI/Pods-ChikaUI-resources.sh",
+				"${PODS_ROOT}/../../ChikaAssets/ChikaAssets/Source/ChikaAssets.xcassets",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChikaUI/Pods-ChikaUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D655309738969270227ACDC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChikaUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48C224B8202AC72100EB2D0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C99CF7202DE51D002C46B6 /* TypingView.swift in Sources */,
+				48C224C2202AC72100EB2D0E /* ViewController.swift in Sources */,
+				48C224C0202AC72100EB2D0E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C224CC202AC72100EB2D0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C224D5202AC72100EB2D0E /* ChikaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48C224D2202AC72100EB2D0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48C224BB202AC72100EB2D0E /* ChikaUI */;
+			targetProxy = 48C224D1202AC72100EB2D0E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		48C224C3202AC72100EB2D0E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48C224C4202AC72100EB2D0E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		48C224C8202AC72100EB2D0E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48C224C9202AC72100EB2D0E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48C224D7202AC72100EB2D0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		48C224D8202AC72100EB2D0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48C224DA202AC72100EB2D0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1FFA6B6940ACFFC8E2538CA /* Pods-ChikaUI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4WBRGV5Z9M;
+				INFOPLIST_FILE = ChikaUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nir.ChikaUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48C224DB202AC72100EB2D0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3A0EE9248E07732772C71F6 /* Pods-ChikaUI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4WBRGV5Z9M;
+				INFOPLIST_FILE = ChikaUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nir.ChikaUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		48C224DD202AC72100EB2D0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12E2CD0824CF8D4890AC61E9 /* Pods-ChikaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4WBRGV5Z9M;
+				INFOPLIST_FILE = ChikaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nir.ChikaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChikaUI.app/ChikaUI";
+			};
+			name = Debug;
+		};
+		48C224DE202AC72100EB2D0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2EBC3E0F3B183CC93B526F7 /* Pods-ChikaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4WBRGV5Z9M;
+				INFOPLIST_FILE = ChikaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nir.ChikaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChikaUI.app/ChikaUI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48C224B7202AC72100EB2D0E /* Build configuration list for PBXProject "ChikaUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C224D7202AC72100EB2D0E /* Debug */,
+				48C224D8202AC72100EB2D0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C224D9202AC72100EB2D0E /* Build configuration list for PBXNativeTarget "ChikaUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C224DA202AC72100EB2D0E /* Debug */,
+				48C224DB202AC72100EB2D0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C224DC202AC72100EB2D0E /* Build configuration list for PBXNativeTarget "ChikaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C224DD202AC72100EB2D0E /* Debug */,
+				48C224DE202AC72100EB2D0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48C224B4202AC72100EB2D0E /* Project object */;
+}
