@@ -6,7 +6,7 @@ use_frameworks!
 
 target 'ChikaUI' do
     
-    pod 'ChikaAssets', :path => '../ChikaAssets'
+    pod 'ChikaAssets'
     
     target 'ChikaUITests' do
         inherit! :search_paths
