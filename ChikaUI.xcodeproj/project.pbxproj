@@ -338,7 +338,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChikaUI/Pods-ChikaUI-resources.sh",
-				"${PODS_ROOT}/../../ChikaAssets/ChikaAssets/Source/ChikaAssets.xcassets",
+				"${PODS_ROOT}/ChikaAssets/ChikaAssets/Source/ChikaAssets.xcassets",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
