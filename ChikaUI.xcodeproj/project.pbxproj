@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4804F9C820347649000FD054 /* ContactTableViewCellPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4804F9C720347649000FD054 /* ContactTableViewCellPlaceholder.swift */; };
 		489EA5072032A5EF001D6D35 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489EA5062032A5EF001D6D35 /* ContactTableViewCell.swift */; };
 		489EA50B2032E3FC001D6D35 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489EA50A2032E3FC001D6D35 /* ContactTableViewController.swift */; };
 		489EA50D2032E46C001D6D35 /* ContactTableViewCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489EA50C2032E46C001D6D35 /* ContactTableViewCellItem.swift */; };
@@ -38,6 +39,7 @@
 		12E2CD0824CF8D4890AC61E9 /* Pods-ChikaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaUITests/Pods-ChikaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		16EC85C43953D672B4EECF4C /* Pods_ChikaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChikaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		412DC7AF4C3F3E64F7506C31 /* Pods_ChikaUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChikaUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4804F9C720347649000FD054 /* ContactTableViewCellPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCellPlaceholder.swift; sourceTree = "<group>"; };
 		489EA5062032A5EF001D6D35 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		489EA50A2032E3FC001D6D35 /* ContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
 		489EA50C2032E46C001D6D35 /* ContactTableViewCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCellItem.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				489EA5062032A5EF001D6D35 /* ContactTableViewCell.swift */,
 				489EA5102032E4DF001D6D35 /* ContactTableViewCellHeightCalculator.swift */,
 				489EA50C2032E46C001D6D35 /* ContactTableViewCellItem.swift */,
+				4804F9C720347649000FD054 /* ContactTableViewCellPlaceholder.swift */,
 				489EA50E2032E4A7001D6D35 /* ContactTableViewCellTheme.swift */,
 				489EA50A2032E3FC001D6D35 /* ContactTableViewController.swift */,
 				489EA5122032E658001D6D35 /* ContactTableViewControllerFactory.swift */,
@@ -377,6 +380,7 @@
 				48C224C2202AC72100EB2D0E /* ViewController.swift in Sources */,
 				489EA50F2032E4A7001D6D35 /* ContactTableViewCellTheme.swift in Sources */,
 				48C224C0202AC72100EB2D0E /* AppDelegate.swift in Sources */,
+				4804F9C820347649000FD054 /* ContactTableViewCellPlaceholder.swift in Sources */,
 				489EA50D2032E46C001D6D35 /* ContactTableViewCellItem.swift in Sources */,
 				489EA5112032E4DF001D6D35 /* ContactTableViewCellHeightCalculator.swift in Sources */,
 				489EA5132032E658001D6D35 /* ContactTableViewControllerFactory.swift in Sources */,
