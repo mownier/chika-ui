@@ -6,6 +6,7 @@ use_frameworks!
 
 target 'ChikaUI' do
     
+    pod 'SDWebImage'
     pod 'ChikaAssets'
     
     target 'ChikaUITests' do
