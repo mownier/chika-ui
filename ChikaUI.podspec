@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'ChikaUI'
-  s.version  = '0.0.2'
+  s.version  = '0.0.3'
   s.summary  = 'Custom UI for Chika'
   s.platform = :ios, '11.0'
   s.license  = { :type => 'MIT', :file => 'LICENSE' }
