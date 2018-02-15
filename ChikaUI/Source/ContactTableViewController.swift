@@ -27,6 +27,16 @@ public class ContactTableViewController: UITableViewController {
     
     var selectedIndexes: [Int: Bool] = [:]
     
+    public var isPlaceholderCellShown: Bool = false {
+        didSet {
+            guard isViewLoaded else {
+                return
+            }
+            
+            tableView.reloadData()
+        }
+    }
+    
     public var style: Style = .default {
         didSet {
             guard isViewLoaded, !deselectAll() else {
@@ -48,6 +58,7 @@ public class ContactTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 0
         tableView.register(ContactTableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(ContactTableViewCellPlaceholder.self, forCellReuseIdentifier: "CellPlaceholder")
     }
     
     public override func viewDidLoad() {
@@ -62,31 +73,68 @@ public class ContactTableViewController: UITableViewController {
         prototype.bounds.size.width = tableView.bounds.width
     }
     
+    public override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = itemCount?() else {
+        switch section {
+        case 0:
+            guard let count = itemCount?() else {
+                return 0
+            }
+            
+            return count
+        
+        case 1:
+            return (isPlaceholderCellShown ? 1 : 0)
+        
+        default:
             return 0
         }
-        
-        return count
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! ContactTableViewCell
-        let item = itemAt?(indexPath.row)
-        cell.layout(withItem: item, isSelectionEnabled: isSelectionEnabled(), isSelected: isSelected(indexPath.row))
-        cell.applyTheme(cellTheme())
-        cell.onSelectorToggled = onSelectorToggled
+        switch indexPath.section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! ContactTableViewCell
+            let item = itemAt?(indexPath.row)
+            cell.layout(withItem: item, isSelectionEnabled: isSelectionEnabled(), isSelected: isSelected(indexPath.row))
+            cell.applyTheme(cellTheme())
+            cell.onSelectorToggled = onSelectorToggled
+            
+            return cell
         
-        return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellPlaceholder") as! ContactTableViewCellPlaceholder
+            return cell
+        
+        default:
+            return UITableViewCell()
+        }
+
     }
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        onSelectItemAt?(indexPath.row)
+        switch indexPath.section {
+        case 0:
+            onSelectItemAt?(indexPath.row)
+        
+        default:
+            break
+        }
     }
     
     public override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let item = itemAt?(indexPath.row)
-        return calculator.calulateHeight(for: prototype, item: item, theme: cellTheme?(), isSelectionEnabled: isSelectionEnabled(), isSelected: isSelected(indexPath.row))
+        switch indexPath.section {
+        case 0:
+            let item = itemAt?(indexPath.row)
+            return calculator.calulateHeight(for: prototype, item: item, theme: cellTheme?(), isSelectionEnabled: isSelectionEnabled(), isSelected: isSelected(indexPath.row))
+        
+        default:
+            return 56
+        }
+        
     }
     
     public func dispose() {
@@ -104,6 +152,7 @@ public class ContactTableViewController: UITableViewController {
         
         for index in 0..<count {
             selectedIndexes[index] = true
+            onSelectItemAt?(index)
         }
         
         tableView.reloadData()
@@ -116,6 +165,7 @@ public class ContactTableViewController: UITableViewController {
             return false
         }
         
+        selectedIndexes.forEach({ onDeselectItemAt?($0.key) })
         selectedIndexes.removeAll()
         tableView.reloadData()
         return true
@@ -129,7 +179,10 @@ public class ContactTableViewController: UITableViewController {
             return false
         }
         
-        indexes.forEach({ selectedIndexes[$0] = true })
+        indexes.forEach({
+            selectedIndexes[$0] = true
+            onSelectItemAt?($0)
+        })
         
         if isViewLoaded {
             tableView.reloadData()
@@ -146,7 +199,10 @@ public class ContactTableViewController: UITableViewController {
             return false
         }
         
-        indexes.forEach({ selectedIndexes.removeValue(forKey: $0) })
+        indexes.forEach({
+            selectedIndexes.removeValue(forKey: $0)
+            onDeselectItemAt?($0)
+        })
         
         if isViewLoaded {
             tableView.reloadData()
