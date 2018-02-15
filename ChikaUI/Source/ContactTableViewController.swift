@@ -38,8 +38,15 @@ public class ContactTableViewController: UITableViewController {
     }
     
     public var style: Style = .default {
+        willSet {
+            guard isViewLoaded else {
+                return
+            }
+            
+            deselectAll()
+        }
         didSet {
-            guard isViewLoaded, !deselectAll() else {
+            guard isViewLoaded else {
                 return
             }
             
