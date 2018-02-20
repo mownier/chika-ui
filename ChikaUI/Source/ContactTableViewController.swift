@@ -125,6 +125,10 @@ public class ContactTableViewController: UITableViewController {
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 0:
+            guard style != .selection else {
+                return
+            }
+            
             onSelectItemAt?(indexPath.row)
         
         default:
