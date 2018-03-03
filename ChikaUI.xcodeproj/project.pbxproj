@@ -19,6 +19,7 @@
 		489EA50F2032E4A7001D6D35 /* ContactTableViewCellTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489EA50E2032E4A7001D6D35 /* ContactTableViewCellTheme.swift */; };
 		489EA5112032E4DF001D6D35 /* ContactTableViewCellHeightCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489EA5102032E4DF001D6D35 /* ContactTableViewCellHeightCalculator.swift */; };
 		489EA5132032E658001D6D35 /* ContactTableViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489EA5122032E658001D6D35 /* ContactTableViewControllerFactory.swift */; };
+		48BED304204A718700C93419 /* PhotoLibraryViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BED303204A718700C93419 /* PhotoLibraryViewControllerFactory.swift */; };
 		48C224C0202AC72100EB2D0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C224BF202AC72100EB2D0E /* AppDelegate.swift */; };
 		48C224C2202AC72100EB2D0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C224C1202AC72100EB2D0E /* ViewController.swift */; };
 		48C224C5202AC72100EB2D0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C224C3202AC72100EB2D0E /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 		48C224CA202AC72100EB2D0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C224C8202AC72100EB2D0E /* LaunchScreen.storyboard */; };
 		48C224D5202AC72100EB2D0E /* ChikaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C224D4202AC72100EB2D0E /* ChikaUITests.swift */; };
 		48C99CF7202DE51D002C46B6 /* TypingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C99CF6202DE51D002C46B6 /* TypingView.swift */; };
+		48E869C8204995F800FE6F35 /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E869C7204995F800FE6F35 /* PhotoLibraryViewController.swift */; };
+		48E869CA2049982B00FE6F35 /* PhotoLibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E869C92049982B00FE6F35 /* PhotoLibraryCollectionViewCell.swift */; };
+		48E869CC2049992100FE6F35 /* PhotoLibrayImageAssetFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E869CB2049992100FE6F35 /* PhotoLibrayImageAssetFetcher.swift */; };
 		4AEDF1F967FFE9111DA5A506 /* Pods_ChikaUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412DC7AF4C3F3E64F7506C31 /* Pods_ChikaUI.framework */; };
 		5F023F9515D913895563273C /* Pods_ChikaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EC85C43953D672B4EECF4C /* Pods_ChikaUITests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +60,7 @@
 		489EA50E2032E4A7001D6D35 /* ContactTableViewCellTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCellTheme.swift; sourceTree = "<group>"; };
 		489EA5102032E4DF001D6D35 /* ContactTableViewCellHeightCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCellHeightCalculator.swift; sourceTree = "<group>"; };
 		489EA5122032E658001D6D35 /* ContactTableViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewControllerFactory.swift; sourceTree = "<group>"; };
+		48BED303204A718700C93419 /* PhotoLibraryViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewControllerFactory.swift; sourceTree = "<group>"; };
 		48C224BC202AC72100EB2D0E /* ChikaUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChikaUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C224BF202AC72100EB2D0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48C224C1202AC72100EB2D0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +72,9 @@
 		48C224D4202AC72100EB2D0E /* ChikaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChikaUITests.swift; sourceTree = "<group>"; };
 		48C224D6202AC72100EB2D0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48C99CF6202DE51D002C46B6 /* TypingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingView.swift; sourceTree = "<group>"; };
+		48E869C7204995F800FE6F35 /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
+		48E869C92049982B00FE6F35 /* PhotoLibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryCollectionViewCell.swift; sourceTree = "<group>"; };
+		48E869CB2049992100FE6F35 /* PhotoLibrayImageAssetFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibrayImageAssetFetcher.swift; sourceTree = "<group>"; };
 		A2EBC3E0F3B183CC93B526F7 /* Pods-ChikaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaUITests/Pods-ChikaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B3A0EE9248E07732772C71F6 /* Pods-ChikaUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaUI/Pods-ChikaUI.release.xcconfig"; sourceTree = "<group>"; };
 		C1FFA6B6940ACFFC8E2538CA /* Pods-ChikaUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaUI/Pods-ChikaUI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +157,17 @@
 		48C224DF202AC72A00EB2D0E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				48E869CD2049993D00FE6F35 /* ContactTableViewController */,
+				48E869CE2049996100FE6F35 /* PhotoLibraryViewController */,
+				48E869CF2049997500FE6F35 /* SelectedContactCarousel */,
+				48E869D02049997F00FE6F35 /* TypingView */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		48E869CD2049993D00FE6F35 /* ContactTableViewController */ = {
+			isa = PBXGroup;
+			children = (
 				489EA5062032A5EF001D6D35 /* ContactTableViewCell.swift */,
 				489EA5102032E4DF001D6D35 /* ContactTableViewCellHeightCalculator.swift */,
 				489EA50C2032E46C001D6D35 /* ContactTableViewCellItem.swift */,
@@ -156,14 +175,39 @@
 				489EA50E2032E4A7001D6D35 /* ContactTableViewCellTheme.swift */,
 				489EA50A2032E3FC001D6D35 /* ContactTableViewController.swift */,
 				489EA5122032E658001D6D35 /* ContactTableViewControllerFactory.swift */,
+			);
+			name = ContactTableViewController;
+			sourceTree = "<group>";
+		};
+		48E869CE2049996100FE6F35 /* PhotoLibraryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				48E869C92049982B00FE6F35 /* PhotoLibraryCollectionViewCell.swift */,
+				48E869C7204995F800FE6F35 /* PhotoLibraryViewController.swift */,
+				48BED303204A718700C93419 /* PhotoLibraryViewControllerFactory.swift */,
+				48E869CB2049992100FE6F35 /* PhotoLibrayImageAssetFetcher.swift */,
+			);
+			name = PhotoLibraryViewController;
+			sourceTree = "<group>";
+		};
+		48E869CF2049997500FE6F35 /* SelectedContactCarousel */ = {
+			isa = PBXGroup;
+			children = (
 				48306A2420371CD6003CE4C9 /* SelectedContactCarousel.swift */,
 				48306A2820371EDF003CE4C9 /* SelectedContactCarouselCell.swift */,
 				48306A2A20371EF2003CE4C9 /* SelectedContactCarouselCellItem.swift */,
 				48306A2C203721E3003CE4C9 /* SelectedContactCarouselCellTheme.swift */,
 				48306A2620371D88003CE4C9 /* SelectedContactCarouselFactory.swift */,
+			);
+			name = SelectedContactCarousel;
+			sourceTree = "<group>";
+		};
+		48E869D02049997F00FE6F35 /* TypingView */ = {
+			isa = PBXGroup;
+			children = (
 				48C99CF6202DE51D002C46B6 /* TypingView.swift */,
 			);
-			path = Source;
+			name = TypingView;
 			sourceTree = "<group>";
 		};
 		C10BF94AF5FCAC411A485243 /* Frameworks */ = {
@@ -391,12 +435,16 @@
 			files = (
 				48306A2D203721E3003CE4C9 /* SelectedContactCarouselCellTheme.swift in Sources */,
 				48306A2B20371EF2003CE4C9 /* SelectedContactCarouselCellItem.swift in Sources */,
+				48E869C8204995F800FE6F35 /* PhotoLibraryViewController.swift in Sources */,
+				48BED304204A718700C93419 /* PhotoLibraryViewControllerFactory.swift in Sources */,
 				489EA5072032A5EF001D6D35 /* ContactTableViewCell.swift in Sources */,
 				48306A2520371CD6003CE4C9 /* SelectedContactCarousel.swift in Sources */,
 				48C99CF7202DE51D002C46B6 /* TypingView.swift in Sources */,
 				489EA50B2032E3FC001D6D35 /* ContactTableViewController.swift in Sources */,
 				48C224C2202AC72100EB2D0E /* ViewController.swift in Sources */,
+				48E869CA2049982B00FE6F35 /* PhotoLibraryCollectionViewCell.swift in Sources */,
 				489EA50F2032E4A7001D6D35 /* ContactTableViewCellTheme.swift in Sources */,
+				48E869CC2049992100FE6F35 /* PhotoLibrayImageAssetFetcher.swift in Sources */,
 				48306A2720371D88003CE4C9 /* SelectedContactCarouselFactory.swift in Sources */,
 				48C224C0202AC72100EB2D0E /* AppDelegate.swift in Sources */,
 				4804F9C820347649000FD054 /* ContactTableViewCellPlaceholder.swift in Sources */,
