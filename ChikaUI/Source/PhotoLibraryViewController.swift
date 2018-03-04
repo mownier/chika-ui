@@ -98,8 +98,6 @@ public class PhotoLibraryViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .white
-        collectionView.contentInset.left = flowLayout.minimumInteritemSpacing
-        collectionView.contentInset.right = flowLayout.minimumInteritemSpacing
         collectionView.alwaysBounceVertical = true
         
         collectionView.register(PhotoLibraryCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
@@ -130,8 +128,6 @@ public class PhotoLibraryViewController: UIViewController {
             return
         }
         
-        headerView!.removeFromSuperview()
-        
         var rect = CGRect.zero
         rect.size.width = collectionView.frame.width - collectionView.contentInset.left - collectionView.contentInset.right
         rect.size.height =  headerView!.frame.height
@@ -139,7 +135,10 @@ public class PhotoLibraryViewController: UIViewController {
         headerView!.frame = rect
         
         collectionView.contentInset.top = (rect.height + flowLayout.minimumInteritemSpacing)
-        collectionView.addSubview(headerView!)
+        
+        if !collectionView.subviews.contains(headerView!) {
+            collectionView.addSubview(headerView!)
+        }
     }
     
     public func reloadData() {
@@ -151,7 +150,9 @@ public class PhotoLibraryViewController: UIViewController {
     }
 
     func completion(_ assets: [PHAsset]) {
-        data = assets
+        data = assets.flatMap({ $0.modificationDate == nil ? nil : $0 }).sorted(by: { asset1, asset2 -> Bool in
+            return asset1.creationDate! > asset2.creationDate!
+        })
     }
     
     public enum SelectionStyle {
@@ -190,6 +191,10 @@ extension PhotoLibraryViewController: UICollectionViewDataSource {
             return
         }
         
+        toggleSelection(withIndex: index)
+    }
+    
+    private func toggleSelection(withIndex index: Int) {
         guard selectedIndexes[index] == nil else {
             deselectIndex(index)
             return
@@ -236,5 +241,9 @@ extension PhotoLibraryViewController: UICollectionViewDataSource {
 }
 
 extension PhotoLibraryViewController: UICollectionViewDelegateFlowLayout {
+ 
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        toggleSelection(withIndex: indexPath.row)
+    }
     
 }
