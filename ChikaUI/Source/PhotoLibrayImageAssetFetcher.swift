@@ -32,11 +32,7 @@ class PhotoLibraryImageAssetFetch: NSObject, PhotoLibrayImageAssetFetcher, PHPho
     private var result: PHFetchResult<PHAsset>?
     private var onImageAssetsChanged: (([PHAsset]) -> Void)?
     
-    private(set) var library: PHPhotoLibrary {
-        didSet {
-            library.register(self)
-        }
-    }
+    private(set) var library: PHPhotoLibrary
     
     let options: PHFetchOptions?
     
@@ -48,6 +44,8 @@ class PhotoLibraryImageAssetFetch: NSObject, PhotoLibrayImageAssetFetcher, PHPho
     init(library: PHPhotoLibrary = .shared(), options: PHFetchOptions? = nil) {
         self.options = options
         self.library = library
+        super.init()
+        self.library.register(self)
     }
     
     func onImageAssetsChanged(_ block: @escaping ([PHAsset]) -> Void) -> PhotoLibrayImageAssetFetcher {
