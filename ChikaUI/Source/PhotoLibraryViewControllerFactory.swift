@@ -53,7 +53,7 @@ public final class PhotoLibraryViewControllerFactory {
         return self
     }
     
-    public func withHeaderView(_ block: @escaping () -> UIView) -> PhotoLibraryViewControllerFactory{
+    public func withHeaderView(_ block: @escaping () -> UIView) -> PhotoLibraryViewControllerFactory {
         headerView = block()
         return self
     }
