@@ -111,7 +111,7 @@ public class PhotoLibraryViewController: UIViewController {
         let options = imageAssetFetcherOptions?()
         let fetcher = imageAssetFetcher(options)
         fetcher.onImageAssetsChanged({ [weak self] assets in
-            self?.data = assets
+            self?.completion(assets)
             
         }).fetchImageAssets(withCompletion: completion)
         
@@ -150,9 +150,18 @@ public class PhotoLibraryViewController: UIViewController {
     }
 
     func completion(_ assets: [PHAsset]) {
-        data = assets.flatMap({ $0.modificationDate == nil ? nil : $0 }).sorted(by: { asset1, asset2 -> Bool in
-            return asset1.creationDate! > asset2.creationDate!
+        let sorted = assets.flatMap({ $0.creationDate == nil ? nil : $0 }).sorted(by: { asset1, asset2 -> Bool in
+            return asset1.creationDate!.timeIntervalSince1970 > asset2.creationDate!.timeIntervalSince1970
         })
+        
+        let indexes: [Int] = selections.flatMap { asset -> Int? in
+            return sorted.index(where: { $0.localIdentifier == asset.localIdentifier })
+        }
+        
+        selectedIndexes.removeAll()
+        indexes.forEach({ selectedIndexes[$0] = true })
+        
+        data = sorted
     }
     
     public enum SelectionStyle {
