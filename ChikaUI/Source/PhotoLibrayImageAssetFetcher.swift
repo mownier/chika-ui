@@ -71,19 +71,23 @@ class PhotoLibraryImageAssetFetch: NSObject, PhotoLibrayImageAssetFetcher, PHPho
         
         result = fetchResult
         
-        block(assets)
+        block(Array(Set(assets)))
     }
     
     func photoLibraryDidChange(_ changeInstance: PHChange) {
-        DispatchQueue.main.sync { [weak self] in
-            guard let result = self?.result, let details = changeInstance.changeDetails(for: result) else {
+        let fetchResult = result
+        let handleAssetsBlock = handleAssets
+        let onImageAssetsChangedBlock = onImageAssetsChanged
+        
+        DispatchQueue.main.sync {
+            guard fetchResult != nil, let details = changeInstance.changeDetails(for: fetchResult!) else {
                 return
             }
             
-            let fetchResult = details.fetchResultAfterChanges
+            let result = details.fetchResultAfterChanges
             
-            self?.handleAssets(withFetchResult: fetchResult, block: { assets in
-                self?.onImageAssetsChanged?(assets)
+            handleAssetsBlock(result, { assets in
+                onImageAssetsChangedBlock?(assets)
             })
         }
     }
