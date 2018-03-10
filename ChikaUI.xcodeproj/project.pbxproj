@@ -30,6 +30,11 @@
 		48E869C8204995F800FE6F35 /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E869C7204995F800FE6F35 /* PhotoLibraryViewController.swift */; };
 		48E869CA2049982B00FE6F35 /* PhotoLibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E869C92049982B00FE6F35 /* PhotoLibraryCollectionViewCell.swift */; };
 		48E869CC2049992100FE6F35 /* PhotoLibrayImageAssetFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E869CB2049992100FE6F35 /* PhotoLibrayImageAssetFetcher.swift */; };
+		48FAF21E205382AB00C2723A /* AvatarSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAF21D205382AB00C2723A /* AvatarSelectorViewController.swift */; };
+		48FAF2212053830100C2723A /* AvatarSelectorViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAF2202053830100C2723A /* AvatarSelectorViewControllerFactory.swift */; };
+		48FAF2232053852000C2723A /* ImageCropperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAF2222053852000C2723A /* ImageCropperViewController.swift */; };
+		48FAF226205385D200C2723A /* ImageCropperViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAF225205385D200C2723A /* ImageCropperViewControllerFactory.swift */; };
+		48FAF2282053BD9D00C2723A /* AvatarSelectorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAF2272053BD9D00C2723A /* AvatarSelectorHeaderView.swift */; };
 		4AEDF1F967FFE9111DA5A506 /* Pods_ChikaUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412DC7AF4C3F3E64F7506C31 /* Pods_ChikaUI.framework */; };
 		5F023F9515D913895563273C /* Pods_ChikaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EC85C43953D672B4EECF4C /* Pods_ChikaUITests.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +80,11 @@
 		48E869C7204995F800FE6F35 /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
 		48E869C92049982B00FE6F35 /* PhotoLibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryCollectionViewCell.swift; sourceTree = "<group>"; };
 		48E869CB2049992100FE6F35 /* PhotoLibrayImageAssetFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibrayImageAssetFetcher.swift; sourceTree = "<group>"; };
+		48FAF21D205382AB00C2723A /* AvatarSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSelectorViewController.swift; sourceTree = "<group>"; };
+		48FAF2202053830100C2723A /* AvatarSelectorViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSelectorViewControllerFactory.swift; sourceTree = "<group>"; };
+		48FAF2222053852000C2723A /* ImageCropperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropperViewController.swift; sourceTree = "<group>"; };
+		48FAF225205385D200C2723A /* ImageCropperViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropperViewControllerFactory.swift; sourceTree = "<group>"; };
+		48FAF2272053BD9D00C2723A /* AvatarSelectorHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSelectorHeaderView.swift; sourceTree = "<group>"; };
 		A2EBC3E0F3B183CC93B526F7 /* Pods-ChikaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaUITests/Pods-ChikaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B3A0EE9248E07732772C71F6 /* Pods-ChikaUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaUI/Pods-ChikaUI.release.xcconfig"; sourceTree = "<group>"; };
 		C1FFA6B6940ACFFC8E2538CA /* Pods-ChikaUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaUI/Pods-ChikaUI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,7 +167,9 @@
 		48C224DF202AC72A00EB2D0E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				48FAF21F205382B100C2723A /* AvatarSelectorViewController */,
 				48E869CD2049993D00FE6F35 /* ContactTableViewController */,
+				48FAF2242053852800C2723A /* ImageCropperViewController */,
 				48E869CE2049996100FE6F35 /* PhotoLibraryViewController */,
 				48E869CF2049997500FE6F35 /* SelectedContactCarousel */,
 				48E869D02049997F00FE6F35 /* TypingView */,
@@ -208,6 +220,25 @@
 				48C99CF6202DE51D002C46B6 /* TypingView.swift */,
 			);
 			name = TypingView;
+			sourceTree = "<group>";
+		};
+		48FAF21F205382B100C2723A /* AvatarSelectorViewController */ = {
+			isa = PBXGroup;
+			children = (
+				48FAF21D205382AB00C2723A /* AvatarSelectorViewController.swift */,
+				48FAF2202053830100C2723A /* AvatarSelectorViewControllerFactory.swift */,
+				48FAF2272053BD9D00C2723A /* AvatarSelectorHeaderView.swift */,
+			);
+			name = AvatarSelectorViewController;
+			sourceTree = "<group>";
+		};
+		48FAF2242053852800C2723A /* ImageCropperViewController */ = {
+			isa = PBXGroup;
+			children = (
+				48FAF2222053852000C2723A /* ImageCropperViewController.swift */,
+				48FAF225205385D200C2723A /* ImageCropperViewControllerFactory.swift */,
+			);
+			name = ImageCropperViewController;
 			sourceTree = "<group>";
 		};
 		C10BF94AF5FCAC411A485243 /* Frameworks */ = {
@@ -438,6 +469,7 @@
 				48E869C8204995F800FE6F35 /* PhotoLibraryViewController.swift in Sources */,
 				48BED304204A718700C93419 /* PhotoLibraryViewControllerFactory.swift in Sources */,
 				489EA5072032A5EF001D6D35 /* ContactTableViewCell.swift in Sources */,
+				48FAF2282053BD9D00C2723A /* AvatarSelectorHeaderView.swift in Sources */,
 				48306A2520371CD6003CE4C9 /* SelectedContactCarousel.swift in Sources */,
 				48C99CF7202DE51D002C46B6 /* TypingView.swift in Sources */,
 				489EA50B2032E3FC001D6D35 /* ContactTableViewController.swift in Sources */,
@@ -449,8 +481,12 @@
 				48C224C0202AC72100EB2D0E /* AppDelegate.swift in Sources */,
 				4804F9C820347649000FD054 /* ContactTableViewCellPlaceholder.swift in Sources */,
 				48306A2920371EDF003CE4C9 /* SelectedContactCarouselCell.swift in Sources */,
+				48FAF21E205382AB00C2723A /* AvatarSelectorViewController.swift in Sources */,
 				489EA50D2032E46C001D6D35 /* ContactTableViewCellItem.swift in Sources */,
 				489EA5112032E4DF001D6D35 /* ContactTableViewCellHeightCalculator.swift in Sources */,
+				48FAF226205385D200C2723A /* ImageCropperViewControllerFactory.swift in Sources */,
+				48FAF2212053830100C2723A /* AvatarSelectorViewControllerFactory.swift in Sources */,
+				48FAF2232053852000C2723A /* ImageCropperViewController.swift in Sources */,
 				489EA5132032E658001D6D35 /* ContactTableViewControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
