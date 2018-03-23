@@ -17,6 +17,8 @@ public class ImageCropperViewController: UIViewController {
     var imageView: UIImageView!
     var scrollView: UIScrollView!
     
+    public var visibleSize: VisibleSize = .`default`
+    
     public override func loadView() {
         super.loadView()
         
@@ -60,12 +62,16 @@ public class ImageCropperViewController: UIViewController {
             return false
         }
         
-        scrollView.backgroundColor = .gray
         zoomState = .zoomedOut
+        
         imageView.image = image
         imageView.frame = .zero
-        scrollView.contentSize = .zero
+        
         scrollView.zoomScale = 1.0
+        scrollView.contentSize = .zero
+        scrollView.contentInset.top = 0
+        scrollView.contentInset.left = 0
+        scrollView.backgroundColor = .gray
         
         guard let imageSize = image?.size else {
             return false
@@ -82,11 +88,23 @@ public class ImageCropperViewController: UIViewController {
         rect.size.height = imageSize.height * ratio
         
         imageView.frame = rect
+        
+        switch visibleSize {
+        case .custom(let size):
+            scrollView.contentInset.top = (targetSize.height - size.height) / 2
+            scrollView.contentInset.left = (targetSize.width - size.width) / 2
+            rect.size.width += (scrollView.contentInset.left)
+            rect.size.height += (scrollView.contentInset.top)
+            scrollView.contentSize = rect.size
+            
+        case .`default`:
+            break
+        }
+        
         scrollView.contentSize = rect.size
+        scrollView.backgroundColor = nil
         
         scrollToCenter(animated: false)
-        
-        scrollView.backgroundColor = nil
         
         return true
     }
@@ -116,12 +134,27 @@ public class ImageCropperViewController: UIViewController {
         
         scrollView.setZoomScale(zoom, animated: true)
         scrollToCenter(animated: true)
+        
+        switch visibleSize {
+        case .custom:
+            scrollView.contentSize.width += (scrollView.contentInset.left)
+            scrollView.contentSize.height += (scrollView.contentInset.top)
+            
+        case .`default`:
+            break
+        }
     }
     
     enum ZoomState {
         
         case zoomedIn
         case zoomedOut
+    }
+    
+    public enum VisibleSize {
+        
+        case `default`
+        case custom(CGSize)
     }
     
 }
