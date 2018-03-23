@@ -45,6 +45,7 @@ public class AvatarSelectorViewController: UIViewController {
         rect.size.height = min(view.bounds.width, view.bounds.height)
         headerView.frame = rect
         imageCropperScene.view.frame = rect
+        imageCropperScene.visibleSize = .custom(headerView.visibleSize)
         imageCropperScene.updateContent()
         
         rect = view.bounds
