@@ -78,14 +78,19 @@ class ContactTableViewCell: UITableViewCell {
             return false
         }
         
-        if !isPrototype, let url = URL(string: item.avatarURL) {
-            let resource = ImageResource(downloadURL: url)
-            avatarView.kf.setImage(
-                with: resource,
-                placeholder: #imageLiteral(resourceName: "avatar"),
-                options: [ .cacheMemoryOnly ],
-                progressBlock: nil,
-                completionHandler: nil)
+        if !isPrototype {
+            if let url = URL(string: item.avatarURL) {
+                let resource = ImageResource(downloadURL: url)
+                avatarView.kf.setImage(
+                    with: resource,
+                    placeholder: #imageLiteral(resourceName: "avatar"),
+                    options: [ .cacheMemoryOnly ],
+                    progressBlock: nil,
+                    completionHandler: nil)
+            
+            } else {
+                avatarView.image = #imageLiteral(resourceName: "avatar")
+            }
         }
         
         presenceView.isHidden = !item.isActive

@@ -152,6 +152,9 @@ class SelectedContactCarouselCell: UICollectionViewCell {
                 options: [ .cacheMemoryOnly ],
                 progressBlock: nil,
                 completionHandler: nil)
+            
+        } else {
+            avatarView.image = #imageLiteral(resourceName: "avatar")
         }
         
         displayNameLabel.text = item.displayName
