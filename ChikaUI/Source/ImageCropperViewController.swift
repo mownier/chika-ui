@@ -17,7 +17,7 @@ public class ImageCropperViewController: UIViewController {
     var imageView: UIImageView!
     var scrollView: UIScrollView!
     
-    public var visibleSize: VisibleSize = .`default`
+    public var cropSize: CropSize = .`default`
     
     public override func loadView() {
         super.loadView()
@@ -49,6 +49,43 @@ public class ImageCropperViewController: UIViewController {
     
     public override func viewDidLayoutSubviews() {
         scrollView.frame = view.bounds
+    }
+    
+    public func crop() -> UIImage? {
+        guard isViewLoaded, imageView.image != nil else {
+            return nil
+        }
+        
+        var cropArea: CGRect = .zero
+        
+        switch cropSize {
+        case .custom(let size):
+            cropArea.size = size
+            cropArea.origin.x = (scrollView.bounds.width - size.width) * 0.5 + scrollView.contentOffset.x
+            cropArea.origin.y = (scrollView.bounds.height - size.height) * 0.5 + scrollView.contentOffset.y
+        
+        case .`default`:
+            cropArea.size = scrollView.bounds.size
+            cropArea.origin.x = scrollView.contentOffset.x
+            cropArea.origin.y = scrollView.contentOffset.y
+        }
+    
+        let imageSize = imageView.image!.size
+        
+        let scale = 1.0 / scrollView.zoomScale;
+        let widthRatio = (imageSize.width / imageView.bounds.width) * scale
+        let heightRatio = (imageSize.height / imageView.bounds.height) * scale
+            
+        cropArea.origin.x *= widthRatio
+        cropArea.origin.y *= heightRatio
+        cropArea.size.width *= widthRatio
+        cropArea.size.height *= heightRatio
+        
+        guard let imageRef = imageView.image!.cgImage?.cropping(to: cropArea) else {
+            return nil
+        }
+        
+        return UIImage(cgImage: imageRef)
     }
     
     @discardableResult
@@ -89,7 +126,7 @@ public class ImageCropperViewController: UIViewController {
         
         imageView.frame = rect
         
-        switch visibleSize {
+        switch cropSize {
         case .custom(let size):
             scrollView.contentInset.top = (targetSize.height - size.height) / 2
             scrollView.contentInset.left = (targetSize.width - size.width) / 2
@@ -135,7 +172,7 @@ public class ImageCropperViewController: UIViewController {
         scrollView.setZoomScale(zoom, animated: true)
         scrollToCenter(animated: true)
         
-        switch visibleSize {
+        switch cropSize {
         case .custom:
             scrollView.contentSize.width += (scrollView.contentInset.left)
             scrollView.contentSize.height += (scrollView.contentInset.top)
@@ -151,7 +188,7 @@ public class ImageCropperViewController: UIViewController {
         case zoomedOut
     }
     
-    public enum VisibleSize {
+    public enum CropSize {
         
         case `default`
         case custom(CGSize)
@@ -166,4 +203,3 @@ extension ImageCropperViewController: UIScrollViewDelegate {
     }
     
 }
-
