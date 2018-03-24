@@ -14,7 +14,7 @@ class AvatarSelectorHeaderView: UIView {
     var circleView: UIView!
     var circleMaskLayer: CAShapeLayer!
     
-    private(set) var visibleSize: CGSize = .zero
+    private(set) var cropSize: CGSize = .zero
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,7 +38,7 @@ class AvatarSelectorHeaderView: UIView {
         circleMaskLayer.frame = bounds
         circleView.layer.mask = circleMaskLayer
         
-        visibleSize = rect.size
+        cropSize = rect.size
         
         bringSubview(toFront: circleView)
     }
