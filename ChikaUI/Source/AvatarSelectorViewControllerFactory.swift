@@ -32,7 +32,7 @@ public final class AvatarSelectorViewControllerFactory {
             .single
             
         }).onSelectPhoto({ asset in
-            vc.imageCropperScene.visibleSize = .custom(vc.headerView.visibleSize)
+            vc.imageCropperScene.cropSize = .custom(vc.headerView.cropSize)
             vc.imageCropperScene.updateContent()
             
             let fetcher = PhotoLibraryImageFetch(asset: asset)
