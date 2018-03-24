@@ -41,7 +41,7 @@ public class ImageCropperViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.onDoubleTap))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.onDoubleTap(_:)))
         tap.numberOfTapsRequired = 2
         
         view.addGestureRecognizer(tap)
@@ -156,26 +156,45 @@ public class ImageCropperViewController: UIViewController {
         scrollView.scrollRectToVisible(rect, animated: animated)
     }
     
-    @objc func onDoubleTap() {
+    func zoomRectForScale(scale: CGFloat, center: CGPoint) -> CGRect {
+        var zoomRect = CGRect.zero
+        zoomRect.size.height = imageView.bounds.height / scale
+        zoomRect.size.width  = imageView.bounds.width  / scale
+        let newCenter = scrollView.convert(center, from: imageView)
+        zoomRect.origin.x = newCenter.x - (zoomRect.size.width / 2.0)
+        zoomRect.origin.y = newCenter.y - (zoomRect.size.height / 2.0)
+        
+        switch cropSize {
+        case .custom:
+            zoomRect.origin.x += scrollView.contentOffset.x
+            zoomRect.origin.y += scrollView.contentOffset.y
+            
+        case .`default`:
+            break
+        }
+        
+        return zoomRect
+    }
+    
+    @objc func onDoubleTap(_ recognizer: UITapGestureRecognizer) {
         switch zoomState {
         case .zoomedIn: zoomState = .zoomedOut
         case .zoomedOut: zoomState = .zoomedIn
         }
         
-        let zoom: CGFloat
-        
         switch zoomState {
-        case .zoomedIn: zoom = maxZoom
-        case .zoomedOut: zoom = 1.0
+        case .zoomedIn:
+            scrollView.zoom(to: zoomRectForScale(scale: maxZoom, center: recognizer.location(in: recognizer.view)), animated: true)
+            
+        case .zoomedOut:
+            scrollView.setZoomScale(1.0, animated: true)
+            scrollToCenter(animated: true)
         }
-        
-        scrollView.setZoomScale(zoom, animated: true)
-        scrollToCenter(animated: true)
         
         switch cropSize {
         case .custom:
-            scrollView.contentSize.width += (scrollView.contentInset.left)
-            scrollView.contentSize.height += (scrollView.contentInset.top)
+            scrollView.contentSize.width += scrollView.contentInset.left
+            scrollView.contentSize.height += scrollView.contentInset.top
             
         case .`default`:
             break
