@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 class SelectedContactCarouselCell: UICollectionViewCell {
     
@@ -144,12 +144,15 @@ class SelectedContactCarouselCell: UICollectionViewCell {
             return false
         }
         
-        avatarView.sd_setImage(
-            with: URL(string: item.avatarURL),
-            placeholderImage: #imageLiteral(resourceName: "avatar"),
-            options: .cacheMemoryOnly,
-            progress: nil,
-            completed: nil)
+        if let url = URL(string: item.avatarURL) {
+            let resource = ImageResource(downloadURL: url)
+            avatarView.kf.setImage(
+                with: resource,
+                placeholder: #imageLiteral(resourceName: "avatar"),
+                options: [ .cacheMemoryOnly ],
+                progressBlock: nil,
+                completionHandler: nil)
+        }
         
         displayNameLabel.text = item.displayName
         

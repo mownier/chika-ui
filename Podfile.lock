@@ -1,17 +1,15 @@
 PODS:
   - ChikaAssets (0.0.2)
-  - SDWebImage (4.2.3):
-    - SDWebImage/Core (= 4.2.3)
-  - SDWebImage/Core (4.2.3)
+  - Kingfisher (4.6.1)
 
 DEPENDENCIES:
   - ChikaAssets
-  - SDWebImage
+  - Kingfisher
 
 SPEC CHECKSUMS:
   ChikaAssets: 00d783b7b1d4a85b49e80d85bb367186471f2bf0
-  SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
 
-PODFILE CHECKSUM: 0e3b96f8ad534e36d7616bc2becf24dcdd12b86b
+PODFILE CHECKSUM: fa6275f568fde4f90e5d7bde20fa7b9b4fd8dd4d
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

@@ -6,8 +6,8 @@ use_frameworks!
 
 target 'ChikaUI' do
     
-    pod 'SDWebImage'
     pod 'ChikaAssets'
+    pod 'Kingfisher'
     
     target 'ChikaUITests' do
         inherit! :search_paths
