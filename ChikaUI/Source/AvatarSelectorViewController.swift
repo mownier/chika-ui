@@ -15,6 +15,10 @@ public class AvatarSelectorViewController: UIViewController {
     
     var headerView: AvatarSelectorHeaderView!
     
+    public var avatarImage: UIImage? {
+        return imageCropperScene?.crop()
+    }
+    
     public override func loadView() {
         super.loadView()
         
@@ -45,7 +49,7 @@ public class AvatarSelectorViewController: UIViewController {
         rect.size.height = min(view.bounds.width, view.bounds.height)
         headerView.frame = rect
         imageCropperScene.view.frame = rect
-        imageCropperScene.visibleSize = .custom(headerView.visibleSize)
+        imageCropperScene.cropSize = .custom(headerView.cropSize)
         imageCropperScene.updateContent()
         
         rect = view.bounds
